@@ -5,12 +5,13 @@
 
 }
 #mainForm{
-    max-width: 700px;
+    max-width: 500px;
    
-    padding: 20px;
+    padding: 40px;
     border: 2px solid black;
     margin: 60px auto;
-    display: flex;  
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items:center;
 
