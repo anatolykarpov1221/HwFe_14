@@ -1,0 +1,30 @@
+*{
+    padding:0 ;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+#mainForm{
+    max-width: 700px;
+   
+    padding: 20px;
+    border: 2px solid black;
+    margin: 60px auto;
+    display: flex;  
+    justify-content: space-between;
+    align-items:center;
+
+}
+#mainForm input{
+    padding: 5px;
+    width: 150px;
+    border: 2px solid black;
+    height: 30px; 
+ }
+ #mainForm button{
+    margin-top: 12px;
+     padding: 5px;
+     border: 2px solid black;
+     background-color:rgba(191, 255, 0, 0.898) ;
+     height: 30px;
+ }
