@@ -1,17 +1,25 @@
 const formNode = document.querySelector("#mainForm");
+ formNode.style.backgroundColor="#d35400";
+ let bgColor=formNode.style.backgroundColor="#bfff00e5";
+// setInterval(() => {
+//    const button = formNode.querySelector("button");
+//    bgColor=(bgColor ==="#d35400") ? "#2980b9" : "#d35400";//тернарник для смены
+//    button.style.backgroundColor = bgColor;
+// }, 2000);
 const datas = [];
 //обработчик отправки
 formNode.addEventListener("submit", event => {
     event.preventDefault();
-    //const {lastName,firstName,age} = event.target;
-    const lastName = event.target.elements.lastName.value;
-    const firstName = event.target.elements.firstName.value;
-    const age = event.target.elements.age.value;
+   
+    const {lastName,firstName,age} = event.target;
+    //const lastName = event.target.elements.lastName.value;
+    //const firstName = event.target.elements.firstName.value;
+    //const age = event.target.elements.age.value;
     //делаем объект из отправляемых данных
     const data ={
-        lastName: lastName,//.value
-        firstName: firstName,//.value
-        age: age//.value
+        lastName: lastName.value,
+        firstName: firstName.value,
+        age: age.value
     };
     datas.push(data);
     rerender(); // обновляем отображение
@@ -26,13 +34,16 @@ function makeDataNode(lastName, firstName, age) {
     lastNameNode.innerText = "Фамилия: " + lastName;
     firstNameNode.innerText = "Имя: " + firstName;
     ageNode.innerText = "Возраст: " + age;
+    container.classList.add("item");
+    container.style.backgroundColor="#1abc9c";
     container.append(lastNameNode, firstNameNode, ageNode);
     return container;
 }
 
 function rerender() {
     const container = document.querySelector("#dataContainer");
-    container.innerHTML = '';
+    container.innerText = '';
+    container.style.backgroundColor = "#2980b9"
     datas.forEach(({ lastName, firstName, age }) => {
         container.append(makeDataNode(lastName, firstName, age));
     });

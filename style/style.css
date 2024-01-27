@@ -2,8 +2,12 @@
     padding:0 ;
     margin: 0;
     box-sizing: border-box;
-
 }
+#mainForm .field{
+    text-align: center; 
+    padding: 5px;
+}
+
 #mainForm{
     max-width: 500px;
    
@@ -12,20 +16,41 @@
     margin: 60px auto;
     display: flex;
     flex-direction: column;
+    gap: 30px;
     justify-content: space-between;
     align-items:center;
 
 }
 #mainForm input{
     padding: 5px;
-    width: 150px;
+    width: 200px;
     border: 2px solid black;
-    height: 30px; 
+    height: 40px;
+    
  }
  #mainForm button{
     margin-top: 12px;
      padding: 5px;
      border: 2px solid black;
-     background-color:rgba(191, 255, 0, 0.898) ;
+     background-color:#d35400 ;
      height: 30px;
+ }
+ #dataContainer{
+    max-width: 500px;
+    margin: 30px auto;
+    border: 2px solid black;
+    padding: 5px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   align-items: center;
+    
+ }
+ .item{
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px 20px;
+    border-radius: 7px;
+    align-items: center;
+    width: 300px;
  }
