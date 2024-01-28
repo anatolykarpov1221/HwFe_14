@@ -1,15 +1,15 @@
 const formNode = document.querySelector("#mainForm");
  formNode.style.backgroundColor="#d35400";
- let bgColor=formNode.style.backgroundColor="#bfff00e5";
-// setInterval(() => {
+//  let bgColor=formNode.style.backgroundColor="#bfff00e5";
+//  setInterval(() => {// моргание подсветки кнопки
 //    const button = formNode.querySelector("button");
 //    bgColor=(bgColor ==="#d35400") ? "#2980b9" : "#d35400";//тернарник для смены
 //    button.style.backgroundColor = bgColor;
-// }, 2000);
-const datas = [];
+//  }, 2000);
+const datas = [];//массив
 //обработчик отправки
-formNode.addEventListener("submit", event => {
-    event.preventDefault();
+formNode.addEventListener("submit", event => {//формируем узел из готового HTML который будем отправлять на сервер кусок из HTML в строке 1 указан
+    event.preventDefault();//запрет обновления страницы после отправки тк LiveServer
    
     const {lastName,firstName,age} = event.target;
     //const lastName = event.target.elements.lastName.value;
@@ -21,7 +21,7 @@ formNode.addEventListener("submit", event => {
         firstName: firstName.value,
         age: age.value
     };
-    datas.push(data);
+    datas.push(data);//
     rerender(); // обновляем отображение
     event.target.reset(); // очищаем input'ы
 });
